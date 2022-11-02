@@ -21,9 +21,9 @@ loginadmin();
 
 class Producto {
     constructor(nombre, precio) {
-        this.nombre  = nombre.toUpperCase();
+        this.nombre  = nombre;
         this.precio  = parseFloat(precio);
-        this.stock = false;
+        this.stock = true;
     }
     sumaIva() {
         this.precio = this.precio * 1.21;
@@ -31,11 +31,13 @@ class Producto {
 }
 
 const productos = [];
-productos.push(new Producto("Shampoo", "370"));
-productos.push(new Producto("Cera para peinar", "400"));
-productos.push(new Producto("tintura", "700"));
+productos.push(new Producto("Shampoo", 370));
+productos.push(new Producto("Polvo para textura", 400));
+productos.push(new Producto("tintura", 700));
 
-for (const producto of productos)
-    producto.sumaIva();
+for (const producto of productos){
+    console.log("------------")
+    console.log(producto.nombre)
+    console.log(producto.precio)
+}
 
-    console.log(Producto.nombre)
