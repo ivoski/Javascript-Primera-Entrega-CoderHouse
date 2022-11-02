@@ -26,14 +26,14 @@ class Producto {
         this.stock = true;
     }
     sumaIva() {
-        this.precio = this.precio * 1.21;
+        return(this.precio * 1.21);
     }
 }
 
 const productos = [];
 productos.push(new Producto("Shampoo", 370));
 productos.push(new Producto("Polvo para textura", 400));
-productos.push(new Producto("tintura", 700));
+productos.push(new Producto("Tintura", 700));
 
 for (const producto of productos){
     console.log("------------")
